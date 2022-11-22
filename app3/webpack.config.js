@@ -72,8 +72,7 @@ module.exports = (env, argv) => {
       },
       exposes: {
         // expose each component
-        "./CounterAppThree": "./src/components/CounterAppThree",
-        "./CounterAppFour": "./src/components/CounterAppFour",
+        "./CounterAppThree": "./src/components/CounterAppThree"
       },
       shared: {
         ...deps,

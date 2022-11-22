@@ -22,7 +22,7 @@ import {
   AdaptiveItemProps,
   MainMenuLogo,
 } from "@epam/uui-components";
-import "./SkillReview.css";
+import "./SkillReview.scss";
 
 const containerStyle = {
   display: "flex",
