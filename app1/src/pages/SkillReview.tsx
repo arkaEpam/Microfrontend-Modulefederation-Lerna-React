@@ -24,6 +24,10 @@ import {
 } from "@epam/uui-components";
 import "./SkillReview.css";
 
+import react_basic from "../data/react-basic.json"
+import javascript_basic from "../data/javascript-basic.json"
+import html_basic from "../data/html-basic.json"
+
 const containerStyle = {
   display: "flex",
   borderRadius: "6px",
@@ -155,21 +159,66 @@ export default function MainMenuBasicExample() {
         <div className="accordion">
           <FlexCell width="100%">
             <Accordion title="HTML" mode="block">
-            HTML
+            <div>
+                {
+                  html_basic.map((item ,index)=> {
+                    return (
+                        <>
+                          <div key={item.id} className="accordion-item">
+                            <a>{item.title}</a>
+                          </div>
+                           { index !== html_basic.length-1 ?
+                              <div className="accordion-item-border"></div> : null
+                           }
+                        </>
+                        )
+                  })
+                }
+              </div>
             </Accordion>
           </FlexCell>
         </div>
         <div className="accordion">
           <FlexCell width="100%">
             <Accordion title=" JavaScript" mode="block">
-           JavaScript
+            <div>
+                {
+                  javascript_basic.map((item ,index)=> {
+                    return (
+                        <>
+                          <div key={item.id} className="accordion-item">
+                            <a>{item.title}</a>
+                          </div>
+                           { index !== javascript_basic.length-1 ?
+                              <div className="accordion-item-border"></div> : null
+                           }
+                        </>
+                        )
+                  })
+                }
+              </div>
             </Accordion>
           </FlexCell>
         </div>
         <div className="accordion">
           <FlexCell width="100%">
             <Accordion title="React(Basic)" mode="block">
-            React(Basic)
+              <div>
+                {
+                  react_basic.map((item ,index)=> {
+                    return (
+                        <>
+                          <div key={item.id} className="accordion-item">
+                            <a>{item.title}</a>
+                          </div>
+                           { index !== react_basic.length-1 ?
+                              <div className="accordion-item-border"></div> : null
+                           }
+                        </>
+                        )
+                  })
+                }
+              </div>
             </Accordion>
           </FlexCell>
         </div>
