@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 const deps = require("./package.json").dependencies;
@@ -23,14 +24,22 @@ module.exports = {
         exclude: /node_modules/,
         use: ["ts-loader"],
       },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader","sass-loader"],
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: ["style-loader", "css-loader","sass-loader"],
+      // },
+      // {
+      //   test: /\.scss$/,
+      //   use: ["sass-loader"],
+      // },
       {
         test: /\.scss$/,
-        use: ["sass-loader"],
-      },
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+     },
+     {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+     }
     ],
   },
   plugins: [
@@ -59,5 +68,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    new MiniCssExtractPlugin()
+    
   ],
 };
