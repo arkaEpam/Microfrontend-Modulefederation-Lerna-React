@@ -19,7 +19,11 @@
   "devDependencies": {
     "css-loader": "^6.7.2",
     "lerna": "3.22.1",
-    "style-loader": "^3.3.1"
+    "node-sass": "^8.0.0",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0"
   },
   "name": "react-micro-frontend",
   "description": "React demo sample for micro front end",
@@ -799,7 +803,6 @@
     "wbuf": "^1.7.3",
     "wcwidth": "^1.0.1",
     "webidl-conversions": "^4.0.2",
-    "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-middleware": "^5.3.0",
     "webpack-dev-server": "^4.7.3",

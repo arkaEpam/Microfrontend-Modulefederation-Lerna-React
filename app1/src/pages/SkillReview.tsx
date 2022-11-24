@@ -22,7 +22,7 @@ import {
   AdaptiveItemProps,
   MainMenuLogo,
 } from "@epam/uui-components";
-import "./SkillReview.css";
+import "./SkillReview.scss";
 
 import react_basic from "../data/react-basic.json"
 import javascript_basic from "../data/javascript-basic.json"
