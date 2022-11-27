@@ -13,6 +13,7 @@ module.exports = {
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
+    historyApiFallback: true,
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
@@ -48,7 +49,7 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         // expose each component
-        "./PageOne": "./src/pages/SkillReview",
+        "./PageOne": "./src/App",
       },
       shared: {
         ...deps,

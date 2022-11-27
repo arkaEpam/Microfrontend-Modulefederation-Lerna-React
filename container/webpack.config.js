@@ -12,12 +12,16 @@ module.exports = (env, argv) => {
   return {
     entry: "./src/index.ts",
     mode: process.env.NODE_ENV || "development",
+    output:{
+      publicPath: '/'
+    },
     devServer: {
       port: 3000,
       open: true,
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
+      historyApiFallback: true,
     },
     resolve: {
       extensions: [".ts", ".tsx", ".js"],
