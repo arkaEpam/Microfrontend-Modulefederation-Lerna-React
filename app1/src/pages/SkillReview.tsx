@@ -28,6 +28,11 @@ import react_basic from "../data/react-basic.json"
 import javascript_basic from "../data/javascript-basic.json"
 import html_basic from "../data/html-basic.json"
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
+import SkillPage from "./SkillPage";
+
 const containerStyle = {
   display: "flex",
   borderRadius: "6px",
@@ -165,7 +170,7 @@ export default function MainMenuBasicExample() {
                     return (
                         <>
                           <div key={item.id} className="accordion-item">
-                            <a>{item.title}</a>
+                            <Link to={`skill/html/${item.id}`} target="_blank">{item.title}</Link>
                           </div>
                            { index !== html_basic.length-1 ?
                               <div className="accordion-item-border"></div> : null
@@ -187,7 +192,7 @@ export default function MainMenuBasicExample() {
                     return (
                         <>
                           <div key={item.id} className="accordion-item">
-                            <a>{item.title}</a>
+                          <Link to={`skill/javscript/${item.id}`} target="_blank">{item.title}</Link>
                           </div>
                            { index !== javascript_basic.length-1 ?
                               <div className="accordion-item-border"></div> : null
@@ -209,7 +214,7 @@ export default function MainMenuBasicExample() {
                     return (
                         <>
                           <div key={item.id} className="accordion-item">
-                            <a>{item.title}</a>
+                          <Link to={`skill/react/${item.id}`} target="_blank">{item.title}</Link>
                           </div>
                            { index !== react_basic.length-1 ?
                               <div className="accordion-item-border"></div> : null
