@@ -32,6 +32,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 import SkillPage from "./SkillPage";
+import DoughnutChart from "../components/DoughnutChart";
 
 const containerStyle = {
   display: "flex",
@@ -145,7 +146,7 @@ export default function MainMenuBasicExample() {
             </div>
             {/* <img className="_3ptQf" width="72" height="72" src="https://static.cdn.epam.com/avatar/68f310872afde56093443db6c2de4552.jpg"/> */}
           </div>
-          <div></div>
+          <div className="user-doughnut-block"><DoughnutChart totalSkills={31} completedSkills={15}/></div>
         </div>
         <div className="page-search">
           {/*       
